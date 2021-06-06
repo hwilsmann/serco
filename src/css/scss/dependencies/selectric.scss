@@ -1,0 +1,91 @@
+.selectric-wrapper{
+    cursor:pointer;
+    position:relative;
+    &.selectric-open{
+        z-index:999;
+        .selectric{
+            .button{
+                &:after{
+                    transform:rotate(180deg);
+                }
+            }
+        }
+        .selectric-items{
+            opacity:1;
+            visibility:visible;
+        }
+    }
+    &.selectric-above{
+        .selectric-items{
+            bottom:calc(100% - 1px);
+            top:auto;
+        }
+    }
+    .selectric-hide-select{
+        display:none;
+    }
+    .selectric{
+        background-color:#fff;
+        border:1px solid #eee;
+        box-shadow:0 2px 4px rgba(0,0,0,.04);
+        position:relative;
+        .label{
+            color:#666;
+            display:block;
+            height:46px;
+            white-space:nowrap;
+            line-height:46px;
+            margin:0 46px 0 15px;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            user-select:none;
+        }
+        .button{
+            align-items:center;
+            display:flex;
+            font-size:0;
+            height:46px;
+            justify-content:center;
+            width:46px;
+            position:absolute;
+            right:0;
+            top:0;
+            &:after{
+                border-left:4px solid transparent;
+                border-right:4px solid transparent;
+                border-top:4px solid #333;
+                content:"";
+            }
+        }
+    }
+    .selectric-items{
+        background-color:#fff;
+        border:1px solid #eee;
+        box-shadow:0 2px 4px rgba(0,0,0,.04);
+        width:100%;
+        left:0;
+        opacity:0;
+        position:absolute;
+        top:calc(100% - 1px);
+        visibility:hidden;
+        transition:opacity .35s;
+        .selectric-scroll{
+            height:100%;
+            overflow:auto;
+            li{
+                color:#666;
+                cursor:pointer;
+                padding:16px;
+                transition:background-color .35s;
+                &.highlighted,
+                &:hover{
+                    background-color:#0d5a80;
+                    color:#fff;
+                }
+            }
+        }
+    }
+    .selectric-input{
+        display:none;
+    }
+}
