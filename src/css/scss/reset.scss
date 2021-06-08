@@ -85,6 +85,10 @@ input{
 	height:48px;
 	width:100%;
 	padding:0 15px;
+	transition:.35s;
+	&:focus{
+		border-color:#17a1e5;
+	}
 }
 input[type='radio']{
 	&:checked,
