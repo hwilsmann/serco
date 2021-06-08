@@ -1,1 +1,3 @@
-$('select').selectric();
+$('select').selectric({
+    nativeOnMobile:false 
+});

@@ -3,6 +3,9 @@
     box-shadow:0 0 16px 0 #00000014;
     padding:40px 0 80px 0;
     text-align:center;
+    @media only screen and (max-width:600px){
+        padding:40px 0;
+    }
     .title{
         margin:0 0 8px 0;
     }
@@ -32,6 +35,9 @@
             top:16px;
             transform:translateX(-50%);
             z-index:-2;
+            @media only screen and (max-width:600px){
+                width:calc(100% - 66px);
+            }
         }
         &:after{
             background:linear-gradient(270deg,#0d5a80 0%,#17e65c 100%);
@@ -42,6 +48,9 @@
             position:absolute;
             top:16px;
             z-index:-1;
+            @media only screen and (max-width:600px){
+                margin:0 calc(66px / 2);
+            }
         }
         &.step--1{
             &:after{
@@ -51,16 +60,25 @@
         &.step--2{
             &:after{
                 width:calc(42% - 135px);
+                @media only screen and (max-width:600px){
+                    width:calc(42% - 66px);
+                }
             }
         }
         &.step--3{
             &:after{
                 width:calc(72% - 135px);
+                @media only screen and (max-width:600px){
+                    width:calc(72% - 66px);
+                }
             }
         }
         &.step--4{
             &:after{
                 width:calc(100% - 135px);
+                @media only screen and (max-width:600px){
+                    width:calc(100% - 66px);
+                }
             }
         }
         .item{
@@ -69,6 +87,9 @@
             flex-direction:column;
             width:135px;
             text-align:center;
+            @media only screen and (max-width:600px){
+                width:66px;
+            }
             &.is--check{
                 .number{
                     background-color:#17e65c;
@@ -116,6 +137,9 @@
                 justify-content:center;
                 width:32px;
                 margin:0 0 15px 0;
+                @media only screen and (max-width:600px){
+                    margin:0;
+                }
                 .icon{
                     display:none;
                     svg{
@@ -127,15 +151,32 @@
             .step{
                 color:#ddd;
                 font-weight:800;
+                @media only screen and (max-width:600px){
+                    display:none;
+                }
             }
+        }
+    }
+    .step--title{
+        color:#0d5a80;
+        display:none;
+        font-weight:800;
+        font-size:20px;
+        margin:20px 0 0 0;
+        text-align:center;
+        @media only screen and (max-width:600px){
+            display:block;
         }
     }
 }
 .section--content{
     background-color:#fafafa;
     padding:80px 0;
+    @media only screen and (max-width:600px){
+        padding:40px 0;
+    }
     .form{
-        &.form--results{
+        &.form--course{
             input[type='radio']{
                 &:checked{
                     + label{
@@ -149,7 +190,7 @@
                 box-shadow:0 2px 4px rgba(0,0,0,.04);
                 width:100%;
                 line-height:1;
-                padding:20px 65px 20px 20px;
+                padding:20px 45px 20px 20px;
                 &:before{
                     left:initial;
                     right:20px;
@@ -162,13 +203,6 @@
                 }
                 .wrapper{
                     margin:0 0 20px 0;
-                    .providers{
-                        border-bottom:1px solid;
-                        color:#17a1e6;
-                        display:block;
-                        font-size:12px;
-                        width:max-content;
-                    }
                 }
             }
         }
@@ -180,9 +214,15 @@
                 flex-direction:initial;
                 justify-content:space-between;
                 margin:-15px;
+                @media only screen and (max-width:600px){
+                    margin:-4px;
+                }
                 .btn{
                     width:calc(100% / 2);
                     margin:15px;
+                    @media only screen and (max-width:600px){
+                        margin:4px;
+                    }
                 }
             }
             &:last-of-type:not(.buttons){
@@ -205,10 +245,18 @@
     .list--charts{
         display:flex;
         margin:-10px;
+        @media only screen and (max-width:600px){
+            flex-wrap:wrap;
+            margin:-5px;
+        }
         .item{
             align-items:center;
             display:flex;
             margin:10px;
+            @media only screen and (max-width:600px){
+                width:calc(100% / 2 - 10px);
+                margin:5px;
+            }
             .charts{
                 display:flex;
                 margin:-1px;
@@ -301,6 +349,7 @@
             .info{
                 color:#666;
                 font-size:12px;
+                line-height:1.3;
                 margin:0 0 0 8px;
             }
         }
