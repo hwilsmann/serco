@@ -95,6 +95,9 @@
                 + label{
                     border-color:#0d5a80;
                     color:inherit;
+                    .title{
+                        color:#0d5a80;
+                    }
                 }
             }
             &:hover{
@@ -204,6 +207,10 @@
                     margin-right:auto;
                 }
                 &.info--right{
+                    .city{
+                        border-bottom:1px solid;
+                        color:#17a1e5;
+                    }
                     .pie{
                         margin:0 10px 0 0;
                     }
